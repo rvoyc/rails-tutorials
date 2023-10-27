@@ -3,7 +3,9 @@
 one:
   name: abc
   email: abc@xyz.com
+  # password: "test123"
 
 two:
   name: xyz
   email: pop@abc.com
+  # password: "test123"
