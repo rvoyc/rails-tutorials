@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   before_save { email.downcase! }
-  attr_accessor :name, :email
   has_many :microposts
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -10,6 +9,9 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, length: { minimum: 6 }
 
+  # def print
+  #   puts 'test'
+  # end
   # def initialize(attributes = {})
   #   # @name  = attributes[:name]
   #   # @email = attributes[:email]
